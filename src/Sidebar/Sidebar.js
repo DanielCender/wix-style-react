@@ -58,7 +58,6 @@ class Sidebar extends Component {
     onScreenChildren: [],
     drivenInChildren: [],
     persistentBottomChildren: [],
-    isScrollbarDisplayed: false,
     selectedKey: '',
     lastSelectedKey: '',
   };
@@ -119,15 +118,6 @@ class Sidebar extends Component {
 
   UNSAFE_componentWillReceiveProps(props) {
     this._setInnerMenus(props);
-  }
-
-  componentDidMount() {
-    this._shouldAddGradient();
-  }
-
-  _shouldAddGradient() {
-    const { scrollHeight, clientHeight } = this.onScreenChildrenRef.current;
-    this.setState({ isScrollbarDisplayed: scrollHeight > clientHeight });
   }
 
   _setInnerMenus(props) {
@@ -204,11 +194,6 @@ class Sidebar extends Component {
     }
   }
 
-  /** marks the selected key as the current one */
-  setSelectedKey = selectedKey => {
-    this.setState({ selectedKey });
-  };
-
   render() {
     const css = { ...defaultCss, ...this.props.classNames };
 
@@ -235,7 +220,7 @@ class Sidebar extends Component {
     });
 
     const gradientClasses = classNames({
-      [css.gradient]: this.state.isScrollbarDisplayed,
+      [css.gradient]: true,
       [css.light]: this.props.skin === sidebarSkins.light,
     });
 
@@ -261,12 +246,11 @@ class Sidebar extends Component {
               data-hook={dataHooks.onScreenChildren}
             >
               {this.state.onScreenChildren}
-              {this.state.isScrollbarDisplayed && (
-                <div
-                  className={gradientClasses}
-                  data-hook={dataHooks.scrollBarGradient}
-                />
-              )}
+
+              <div
+                className={gradientClasses}
+                data-hook={dataHooks.scrollBarGradient}
+              />
             </div>
 
             {this.state.drivenInChildren.length !== 0 && (
