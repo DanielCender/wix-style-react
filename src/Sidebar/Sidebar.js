@@ -50,7 +50,6 @@ class Sidebar extends Component {
 
   itemKey2Children = {};
   itemKey2ParentKey = {};
-  onScreenChildrenRef = React.createRef();
 
   state = {
     persistentTopChildren: [],
@@ -241,7 +240,6 @@ class Sidebar extends Component {
               )}
 
             <div
-              ref={this.onScreenChildrenRef}
               className={sliderClasses}
               data-hook={dataHooks.onScreenChildren}
             >
