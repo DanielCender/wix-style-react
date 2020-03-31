@@ -161,7 +161,6 @@ $gradientHeight: 36px;
 .gradient {
   height: $gradientHeight;
   min-height: $gradientHeight;
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   background-image: linear-gradient(to bottom, $gradientColor , $mainBackgroundColor);
