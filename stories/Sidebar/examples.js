@@ -4,7 +4,7 @@ export const importExample =
 export const businessManagerSidebar = `
 class DesignedSidebar extends React.Component {
   _renderUpgradeButton = () => (
-    <Box align="center" margin="24px 30px">
+    <Box align="center" margin="24px 18px">
       <Button size="small" skin="premium">
         Upgrade
       </Button>
