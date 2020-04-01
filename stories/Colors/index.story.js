@@ -2,8 +2,6 @@ import React from 'react';
 import { description } from 'wix-storybook-utils/Sections';
 import { storySettings } from './storySettings';
 import { Layout, Cell } from '../../src/Layout';
-import classNames from 'classnames';
-import styles from './colorsStory.scss';
 import colors from '../../src/colors.scss';
 import Text from '../../src/Text';
 import Box from '../../src/Box';
@@ -328,19 +326,19 @@ export default {
             {category.units.map((unit, u_index) => (
               <Cell key={u_index}>
                 <Box height="140px" direction="vertical">
-                  <div
-                    className={classNames(styles.cell, {
-                      [styles.darkBorder]: unit.darkBorder,
-                    })}
-                    style={{
-                      backgroundColor: colors[unit.name],
-                      borderColor: !unit.darkBorder && colors[unit.name],
-                    }}
+                  <Box
+                    height="80px"
+                    width="80px"
+                    borderRadius="8px"
+                    padding="10px"
+                    backgroundColor={colors[unit.name]}
+                    borderColor="D30"
+                    border={unit.darkBorder ? '1px solid transparent' : ''}
                   >
                     <Text light={unit.lightText} size="small">
                       {unit.description}
                     </Text>
-                  </div>
+                  </Box>
                   <Box marginTop={1}>
                     <Text size="small">{unit.name}</Text>
                   </Box>
