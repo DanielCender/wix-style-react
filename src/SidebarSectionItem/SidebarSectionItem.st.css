@@ -1,7 +1,7 @@
 :import {
   -st-from: "../Text/Text.st.css";
   -st-default: Text;
-};
+}
 
 :import {
   -st-from: "../Sidebar/colors.st.css";
@@ -51,12 +51,12 @@
 /* Basic */
 
 .root:skin(dark) {
-  background-color: value(sidebarBackgroundColor);
+  background-color: transparent;
   color: value(textColor);
 }
 
 .root:skin(light) {
-  background-color: value(sidebarLightBackgroundColor);
+  background-color: transparent;
   color: value(lightTextColor);
 }
 

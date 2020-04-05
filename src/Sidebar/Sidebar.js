@@ -244,11 +244,6 @@ class Sidebar extends Component {
               data-hook={dataHooks.onScreenChildren}
             >
               {this.state.onScreenChildren}
-
-              <div
-                className={gradientClasses}
-                data-hook={dataHooks.scrollBarGradient}
-              />
             </div>
 
             {this.state.drivenInChildren.length !== 0 && (
