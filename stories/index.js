@@ -151,7 +151,8 @@ require('../src/Typography/docs/cssClasses.story');
 
 // 1. Foundations
 require('../src/Typography/docs/index.story'); // 1.2 Typography
-require('./Icons'); // 1.4 Icons
+require('../src/new-icons/docs/index.story.js'); // 1.4 Icons
+
 
 require('./ScrollBar'); // 1.8 ScrollBar
 
