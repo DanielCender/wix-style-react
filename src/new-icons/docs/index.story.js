@@ -23,6 +23,8 @@ const API_Table = `
 | ***All other Props are passed to the SVG element*** | | | | |
 `;
 
+const packageURL = 'https://www.npmjs.com/package/wix-ui-icons-common';
+
 const example = config => baseExample({ components: allComponents, ...config });
 
 export default {
