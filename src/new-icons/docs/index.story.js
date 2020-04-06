@@ -9,18 +9,20 @@ import {
   divider,
   example as baseExample,
   code as baseCode,
-  playground,
   api,
 } from 'wix-storybook-utils/Sections';
-
+import Markdown from 'wix-storybook-utils/Markdown';
+import Readme from '../README.md';
+import allComponents from '../../../stories/utils/allComponents';
 import { storySettings } from './storySettings';
-import * as Icons from 'wix-ui-icons-common';
-import { Layout, Cell } from 'wix-style-react';
+import * as examples from './examples';
+
+const componentsWithIcons = { ...allComponents, ...allComponents.Icons };
 
 const example = config =>
-  baseExample({ components: Object.assign(Icons, Layout, Cell), ...config });
-const code = config =>
-  baseCode({ components: Object.assign(Icons, Layout, Cell), ...config });
+  baseExample({ components: componentsWithIcons, ...config });
+
+const code = config => baseCode({ components: componentsWithIcons, ...config });
 
 export default {
   category: storySettings.category,
@@ -52,17 +54,12 @@ export default {
 
           example({
             title: 'Custom Icon color',
-            source: `<Duplicate style={{ color: 'blue' }} />`,
+            source: examples.colorsExample,
           }),
 
           example({
             title: 'Custom Icon size',
-            source: `<div>
-                        <Duplicate size="24px" />
-                        <Duplicate size="48px" />
-                        <Duplicate size="72px" />
-                    </div>
-                   `,
+            source: examples.sizesExample,
           }),
 
           example({
