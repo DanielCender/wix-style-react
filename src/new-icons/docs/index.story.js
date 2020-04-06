@@ -44,7 +44,7 @@ export default {
 
           example({
             title: 'All Icons',
-            source: <div />,
+            source: '<div />',
           }),
 
           example({
