@@ -9,6 +9,9 @@ import {
   example as baseExample,
   api,
 } from 'wix-storybook-utils/Sections';
+import CodeExample from 'wix-storybook-utils/CodeExample';
+import AllIcons from './AllIcons';
+import AllIconsRaw from '!raw-loader!./AllIcons';
 
 import allComponents from '../../../stories/utils/allComponents';
 import { storySettings } from './storySettings';
@@ -43,11 +46,6 @@ export default {
           title('Examples'),
 
           example({
-            title: 'All Icons',
-            source: '<div />',
-          }),
-
-          example({
             title: 'Custom Icon color',
             description:
               'The icon color can be customized using the `style` prop or `className` prop. These are the recommended colors.',
@@ -69,6 +67,10 @@ export default {
             title: 'Usage',
             source: examples.usageExample,
           }),
+
+          <CodeExample title="All Icons" code={AllIconsRaw}>
+            <AllIcons />
+          </CodeExample>,
         ],
       }),
 

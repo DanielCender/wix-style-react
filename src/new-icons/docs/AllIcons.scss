@@ -1,0 +1,29 @@
+@import './src/colors';
+
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 30px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.single-icon-view {
+  width: 25%;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.icon-name {
+  margin-left: 10px;
+}
+
+.standard { color: #3899ec}
+.dark { color : $D10 }
+.destructive { color:  $R10 }
+.light { color: $D80 }
+.disabled { color: $D10-30 }
+.premium { color: $P10 }
+.success { color: $G10 }
