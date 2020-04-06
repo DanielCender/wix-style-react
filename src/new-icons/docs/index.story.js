@@ -7,13 +7,21 @@ import {
   title,
   divider,
   example as baseExample,
-  api,
 } from 'wix-storybook-utils/Sections';
 import AllIcons from './AllIcons';
 
 import allComponents from '../../../stories/utils/allComponents';
 import { storySettings } from './storySettings';
 import * as examples from './examples';
+
+const API_Table = `
+| Name | Type | Default Value | Required | Description |
+| --- | --- | --- | --- | --- |
+| className | string |  |   | Set custom class to svg root of icon |
+| size | string |  |   | Set the size of the icon |
+| style | object |  |   | Set style object to svg root of icon |
+| ***All other Props are passed to the SVG element*** | | | | |
+`;
 
 const example = config => baseExample({ components: allComponents, ...config });
 
@@ -67,7 +75,9 @@ export default {
         ],
       }),
 
-      ...[{ title: 'API', sections: [api()] }].map(tab),
+      ...[{ title: 'API', sections: [description({ text: API_Table })] }].map(
+        tab,
+      ),
     ]),
   ],
 };

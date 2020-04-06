@@ -10,24 +10,6 @@ npm i wix-ui-icons-common
 yarn add wix-ui-icons-common
 ```
 
-## Usage
-
-```jsx
-import { Component } from 'react';
-import Favorite from 'wix-ui-icons-common/Favorite';
-import ChevronDown from 'wix-ui-icons-common/ChevronDown';
-
-class MyComponent extends Component {
-  render() {
-    return (
-      <div>
-        <Favorite />;
-        <ChevronDown size="24px" className="someclass" />;
-      </div>
-    );
-  }
-}
-```
 
 ## Properties
 
