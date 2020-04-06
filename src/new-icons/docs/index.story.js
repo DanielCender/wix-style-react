@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  header,
   tabs,
   tab,
   description,
@@ -8,11 +7,9 @@ import {
   title,
   divider,
   example as baseExample,
-  code as baseCode,
   api,
 } from 'wix-storybook-utils/Sections';
-import Markdown from 'wix-storybook-utils/Markdown';
-import Readme from '../README.md';
+
 import allComponents from '../../../stories/utils/allComponents';
 import { storySettings } from './storySettings';
 import * as examples from './examples';
@@ -21,8 +18,6 @@ const componentsWithIcons = { ...allComponents, ...allComponents.Icons };
 
 const example = config =>
   baseExample({ components: componentsWithIcons, ...config });
-
-const code = config => baseCode({ components: componentsWithIcons, ...config });
 
 export default {
   category: storySettings.category,
@@ -40,7 +35,7 @@ export default {
           }),
 
           importExample(
-            "import ChevronDown from 'wix-ui-icons-common/ChevronDown';\n",
+            "import Duplicate from 'wix-ui-icons-common/Duplicate';\n",
           ),
 
           divider(),
@@ -49,7 +44,7 @@ export default {
 
           example({
             title: 'All Icons',
-            source: `<Duplicate style={{ color: 'blue' }} />`,
+            source: <div />,
           }),
 
           example({
