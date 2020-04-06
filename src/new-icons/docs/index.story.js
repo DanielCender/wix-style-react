@@ -75,9 +75,12 @@ export default {
         ],
       }),
 
-      ...[{ title: 'API', sections: [description({ text: API_Table })] }].map(
-        tab,
-      ),
+      ...[
+        {
+          title: 'API',
+          sections: [description({ title: 'Props', text: API_Table })],
+        },
+      ].map(tab),
     ]),
   ],
 };
