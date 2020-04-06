@@ -1,4 +1,4 @@
-import { colors, sizes } from './constants';
+import { colors } from './constants';
 
 export const colorsExample = `<Layout>
                         <Cell>
@@ -41,3 +41,8 @@ export const sizesExample = `<Layout cols="3">
                         <Duplicate size="72px" />
                     </Layout>
                    `;
+
+export const RTL_LTR_Example = ` <Layout cols="2">
+  <Duplicate />
+ <Duplicate style={{ transform: 'scaleX(-1)'}} />
+</Layout>`;

@@ -54,6 +54,8 @@ export default {
 
           example({
             title: 'Custom Icon color',
+            description:
+              'The icon color can be customized using the `style` prop or `className` prop. These are the recommended colors.',
             source: examples.colorsExample,
           }),
 
@@ -63,8 +65,9 @@ export default {
           }),
 
           example({
-            title: 'RTL Icon',
-            source: `<Duplicate style={{ transform: 'scaleX(-1)'}} />`,
+            title: 'LTR and RTL Icons',
+            description: 'Icons can be used either `RTL` or `LTR` (default).',
+            source: examples.RTL_LTR_Example,
           }),
         ],
       }),
