@@ -1,3 +1,4 @@
+stam
 <p align="center">
 
   <a href="https://wix.github.com/wix-style-react">
