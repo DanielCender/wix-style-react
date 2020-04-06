@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  header,
   tabs,
   tab,
   description,
@@ -9,9 +10,7 @@ import {
   example as baseExample,
   api,
 } from 'wix-storybook-utils/Sections';
-import CodeExample from 'wix-storybook-utils/CodeExample';
 import AllIcons from './AllIcons';
-import AllIconsRaw from '!raw-loader!./AllIcons';
 
 import allComponents from '../../../stories/utils/allComponents';
 import { storySettings } from './storySettings';
@@ -65,9 +64,7 @@ export default {
             source: examples.usageExample,
           }),
 
-          <CodeExample title="All Icons" code={AllIconsRaw}>
-            <AllIcons />
-          </CodeExample>,
+          <AllIcons />,
         ],
       }),
 
