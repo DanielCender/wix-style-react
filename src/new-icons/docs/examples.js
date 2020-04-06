@@ -3,18 +3,18 @@ import { colors } from './constants';
 export const colorsExample = `<Layout>
                         <Cell>
                           <Layout justifyItems="center" cols="4">
-                              <Box  direction="vertical" align="center">
-                                 <Duplicate style={{ color: '${colors.standard}' }} /><Text>Standard</Text>
+                              <Box direction="vertical" align="center">
+                                 <Icons.Duplicate style={{ color: '${colors.standard}' }} /><Text>Standard</Text>
                               </Box>
                               <Box  direction="vertical" align="center">
-                               <Duplicate style={{ color: '${colors.dark}' }} /><Text>Dark</Text>
+                                <Icons.Duplicate style={{ color: '${colors.dark}' }} /><Text>Dark</Text>
                               </Box>
                               <Box  direction="vertical" align="center">
-                               <Duplicate style={{ color: '${colors.destructive}' }} /><Text>Destructive</Text>
+                               <Icons.Duplicate style={{ color: '${colors.destructive}' }} /><Text>Destructive</Text>
                               </Box>
                               <Box  direction="vertical" align="center" >
                                 <Box backgroundColor="D10">
-                                  <Duplicate style={{ color: '${colors.light}' }} />
+                                  <Icons.Duplicate style={{ color: '${colors.light}' }} />
                                 </Box>
                                   <Text>Light</Text>
                             </Box>
@@ -23,28 +23,28 @@ export const colorsExample = `<Layout>
                         <Cell>
                           <Layout justifyItems="center" cols="4">
                             <Box  direction="vertical" align="center">
-                               <Duplicate style={{ color: '${colors.disabled}' }} /><Text>Disabled</Text>
+                               <Icons.Duplicate style={{ color: '${colors.disabled}' }} /><Text>Disabled</Text>
                             </Box>
                             <Box  direction="vertical" align="center">
-                               <Duplicate style={{ color: '${colors.premium}' }} /><Text>Premium</Text>
+                               <Icons.Duplicate style={{ color: '${colors.premium}' }} /><Text>Premium</Text>
                             </Box>
                             <Box  direction="vertical" align="center">
-                               <Duplicate style={{ color: '${colors.success}' }} /><Text>Success</Text>
+                               <Icons.Duplicate style={{ color: '${colors.success}' }} /><Text>Success</Text>
                             </Box>
                            </Layout>
                         </Cell>
             </Layout>`;
 
 export const sizesExample = `<Layout cols="3">
-                        <Duplicate size="24px" />
-                        <Duplicate size="48px" />
-                        <Duplicate size="72px" />
+                        <Icons.Duplicate size="24px" />
+                        <Icons.Duplicate size="48px" />
+                        <Icons.Duplicate size="72px" />
                     </Layout>
                    `;
 
 export const RTL_LTR_Example = ` <Layout cols="2">
-  <Duplicate />
- <Duplicate style={{ transform: 'scaleX(-1)'}} />
+ <Icons.Duplicate />
+ <Icons.Duplicate style={{ transform: 'scaleX(-1)'}} />
 </Layout>`;
 
 export const usageExample = `<Layout>

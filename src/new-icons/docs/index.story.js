@@ -17,10 +17,7 @@ import allComponents from '../../../stories/utils/allComponents';
 import { storySettings } from './storySettings';
 import * as examples from './examples';
 
-const componentsWithIcons = { ...allComponents, ...allComponents.Icons };
-
-const example = config =>
-  baseExample({ components: componentsWithIcons, ...config });
+const example = config => baseExample({ components: allComponents, ...config });
 
 export default {
   category: storySettings.category,
