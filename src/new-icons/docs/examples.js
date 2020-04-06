@@ -35,14 +35,14 @@ export const colorsExample = `<Layout>
                         </Cell>
             </Layout>`;
 
-export const sizesExample = `<Layout cols="3">
+export const sizesExample = `<Layout cols="4">
                         <Icons.Duplicate size="24px" />
                         <Icons.Duplicate size="48px" />
                         <Icons.Duplicate size="72px" />
                     </Layout>
                    `;
 
-export const RTL_LTR_Example = ` <Layout cols="2">
+export const RTL_LTR_Example = ` <Layout cols="4">
  <Icons.Duplicate />
  <Icons.Duplicate style={{ transform: 'scaleX(-1)'}} />
 </Layout>`;
