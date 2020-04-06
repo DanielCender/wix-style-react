@@ -46,3 +46,49 @@ export const RTL_LTR_Example = ` <Layout cols="2">
   <Duplicate />
  <Duplicate style={{ transform: 'scaleX(-1)'}} />
 </Layout>`;
+
+export const usageExample = `<Layout>
+<Cell>
+  <Layout cols="4">
+    <Text>Icon Prefix</Text>
+    <Button prefixIcon={<Icons.Edit />}>Edit Item</Button>
+    <Button prefixIcon={<Icons.Edit />} priority="secondary">Edit Item</Button>
+  </Layout>
+</Cell>
+<Cell>
+  <Layout cols="4">
+   <Text>Icon Suffix</Text>
+    <Button suffixIcon={<Icons.ChevronDownSmall />}>Actions</Button>
+    <Button suffixIcon={<Icons.ChevronDownSmall />} priority="secondary">Edit Item</Button>
+  </Layout>
+</Cell>
+<Cell>
+  <Layout cols="4">
+    <Text>Icon Only</Text>
+    <IconButton><Icons.More /></IconButton>
+    <IconButton priority="secondary"><Icons.More /></IconButton>
+  </Layout>
+</Cell>
+<Cell>
+  <Layout cols="4">
+     <Text>Text Button</Text>
+     <TextButton prefixIcon={<Icons.Add/>}>Add Item</TextButton>
+     <TextButton suffixIcon={<Icons.ChevronDownSmall />}>Actions</TextButton>
+  </Layout>
+</Cell>
+<Cell>
+  <Layout cols="4">
+    <Text>Inputs</Text>
+    <FormField label="Date:">
+        <Input
+      value="Aug 29, 2006"
+      prefix={
+        <Input.IconAffix>
+          <Icons.Date />
+        </Input.IconAffix>
+      }
+    />
+    </FormField>
+  </Layout>
+</Cell>
+</Layout>`;

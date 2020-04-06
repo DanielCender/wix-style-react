@@ -64,6 +64,11 @@ export default {
             description: 'Icons can be used either `RTL` or `LTR` (default).',
             source: examples.RTL_LTR_Example,
           }),
+
+          example({
+            title: 'Usage',
+            source: examples.usageExample,
+          }),
         ],
       }),
 
