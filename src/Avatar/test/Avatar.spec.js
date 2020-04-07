@@ -99,4 +99,15 @@ describe('Avatar', () => {
     expect(await driver.indicationExists()).toBe(false);
     expect(await driver.customIndicationExists()).toBe(true);
   });
+
+  it('For size < 30 text content should be 1 character', async () => {
+    const { driver: driver24 } = createDriver(
+      <Avatar size="size24" name="John Doe" />,
+    );
+    const { driver: driver18 } = createDriver(
+      <Avatar size="size18" name="John Doe" />,
+    );
+    expect(await driver24.getTextContent()).toBe('J');
+    expect(await driver18.getTextContent()).toBe('J');
+  });
 });

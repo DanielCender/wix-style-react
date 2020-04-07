@@ -47,7 +47,8 @@
       presenceType(enum(busy, online, offline)),
       presence,
       clickable,
-      fade;
+      fade,
+      name;
   position: relative;
   display: inline-block;
 }
@@ -351,3 +352,7 @@
   visibility: hidden;
 }
 
+.avatarContainer:size(size24):name .avatar:contentType(text)::content  {
+  visibility: visible;
+  font-size:12px;
+}
