@@ -96,7 +96,7 @@ class Avatar extends React.PureComponent {
             presenceType: presence,
             clickable: !!onClick,
             fade: fadeIndication,
-            name: name && !text,
+            text: !!text,
           })}
           data-madefor={isMadefor()}
         >
@@ -112,7 +112,7 @@ class Avatar extends React.PureComponent {
                 text,
                 name,
                 onClick,
-                initialsLimit: sizeNumber < 30 && 1,
+                initialsLimit: sizeNumber < 30 ? 1 : undefined,
                 'data-hook': dataHooks.avatarCore,
               }}
               className={classNames(
