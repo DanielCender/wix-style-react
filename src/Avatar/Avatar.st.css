@@ -343,16 +343,13 @@
 }
 
 .avatarContainer:size(size36)[data-madefor="true"] .avatar:contentType(text)::content,
-.avatarContainer:size(size30)[data-madefor="true"] .avatar:contentType(text)::content  {
+.avatarContainer:size(size30)[data-madefor="true"] .avatar:contentType(text)::content,
+.avatarContainer:size(size24) .avatar:contentType(text)::content,
+.avatarContainer:size(size18) .avatar:contentType(text)::content { 
   -st-mixin: text-tiny-bold;
 }
 
-.avatarContainer:size(size24) .avatar:contentType(text)::content,
+.avatarContainer:size(size24):not(:name) .avatar:contentType(text)::content,
 .avatarContainer:size(size18) .avatar:contentType(text)::content  {
   visibility: hidden;
-}
-
-.avatarContainer:size(size24):name .avatar:contentType(text)::content  {
-  visibility: visible;
-  font-size:12px;
 }

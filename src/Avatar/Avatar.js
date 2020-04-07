@@ -112,7 +112,7 @@ class Avatar extends React.PureComponent {
                 text,
                 name,
                 onClick,
-                initialsLimit: sizeNumber < 30 ? 1 : undefined,
+                initialsLimit: sizeNumber < 30 && 1,
                 'data-hook': dataHooks.avatarCore,
               }}
               className={classNames(
